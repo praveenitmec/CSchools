@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stcount: 1
+  mstcount: 1
+  fstcount: 1
+  grade: 1
+  school: one
+
+two:
+  stcount: 1
+  mstcount: 1
+  fstcount: 1
+  grade: 1
+  school: two
