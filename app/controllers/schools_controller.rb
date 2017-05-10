@@ -26,6 +26,7 @@ class SchoolsController < ApplicationController
   # POST /schools
   # POST /schools.json
   def create
+    
     @school = School.new(school_params)
 
     respond_to do |format|
@@ -75,6 +76,7 @@ class SchoolsController < ApplicationController
     def school_params
       params.require(:school).permit(:name, :stype,
        :school_address_attributes => [:city, :line, :street, :state,
-       :state_code, :zip_code, :phone_number, :neighborhood])
+       :state_code, :zip_code, :phone_number, :neighborhood],
+       :school_detail_attributes => [:stcount, :mstcount, :fstcount, :grade])
     end
 end

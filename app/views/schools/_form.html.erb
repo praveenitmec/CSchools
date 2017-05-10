@@ -21,6 +21,29 @@
     <%= g.text_field :stype %>
   </div>
 
+  <%= g.fields_for :school_detail do |y| %>
+
+      <div class="field">
+        <label> Student Count </label>
+        <%= y.text_field :stcount %>
+      </div>
+
+      <div class="field">
+        <label> Male Student Count </label>
+        <%= y.text_field :mstcount %>
+      </div>
+
+      <div class="field">
+        <label> Female Student Count </label>
+        <%= y.text_field :fstcount %>
+      </div>
+
+      <div class="field">
+        <label> Grade </label>
+        <%= y.text_field :grade %>
+      </div>
+  <% end %>
+
   <%= g.fields_for :school_address do |f| %>
 
 
