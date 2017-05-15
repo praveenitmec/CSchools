@@ -10,5 +10,26 @@
   <%= @school.stype %>
 </p>
 
+<% school_detail = @school.school_detail
+   school_address = @school.school_address
+ %>
+
+ <p>
+   <strong>Total:</strong>
+   <%= school_detail.st_count %>
+ </p>
+
+ <p>
+   <strong>City:</strong>
+   <%= school_address.city %>
+ </p>
+
+ <p>
+   <strong>State:</strong>
+   <%= school_address.state_code %>
+ </p>
+
+
+
 <%= link_to 'Edit', edit_school_path(@school) %> |
 <%= link_to 'Back', schools_path %>
