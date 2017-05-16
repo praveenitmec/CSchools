@@ -4,8 +4,7 @@ class SchoolsController < ApplicationController
   # GET /schools
   # GET /schools.json
   def index
-    @schools = School.all
-    puts @schools.first.school_address
+    @schools = School.includes(:school_address, :school_detail).all
     @schools
   end
 
@@ -26,7 +25,7 @@ class SchoolsController < ApplicationController
   # POST /schools
   # POST /schools.json
   def create
-    
+
     @school = School.new(school_params)
 
     respond_to do |format|
